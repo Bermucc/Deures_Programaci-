@@ -13,10 +13,19 @@ public class Exercici0003 {
         Scanner scanner = new Scanner(System.in);
         Locale localeUS = Locale.US;
 
-        /*
-            TODO: Resol aquí l'exercici
-        */
+        System.out.print("Introdueix el preu base: ");
+        Double preub = scanner.nextDouble();
         
+        System.out.print("Introdueix l'IVA (%): ");
+        Double ivA = scanner.nextDouble();
+
+        System.out.print("Introdueix el descompte (%): ");
+        Double decompt = scanner.nextDouble();
+
+        Double preuFinal = calcularPreuFinal(preub, ivA, decompt);
+
+        System.out.printf(localeUS, "El preu final és: %.2f\n", preuFinal);
+
         scanner.close();
     }
 }
