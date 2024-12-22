@@ -16,7 +16,8 @@ public class Exercici0006 {
         if (dia.equalsIgnoreCase("dimarts")){
             total *= 0.8;
 
-        } else if (dia.equalsIgnoreCase("dijous") && numNens > 0 && numeroAdults > 0) {
+        } 
+        else if (dia.equalsIgnoreCase("dijous") && numNens > 0 && numeroAdults > 0) {
             total -= preuNens * 0.5;
             total -= preuNens * (numNens - 1);
         }

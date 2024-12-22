@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: com.exercicis.TestExercici0012
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.066 s <<< FAILURE! -- in com.exercicis.TestExercici0012
+com.exercicis.TestExercici0012.testMainFunction -- Time elapsed: 0.015 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+>>>>>>>>>> Diff found >>>>>>>>>>
+First difference at position 12.
+Received: All Wonders: <difference>
+Expected: All Wonders:
+<<<<<<<<<< Diff end <<<<<<<<<<
+ ==> expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:214)
+	at com.exercicis.TestExercici0012.testMainFunction(TestExercici0012.java:160)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
