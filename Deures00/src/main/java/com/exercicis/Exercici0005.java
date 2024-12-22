@@ -4,14 +4,17 @@ package com.exercicis;
 public class Exercici0005 {
 
     public static boolean isPalindrom(String text) {
-        
-        return false;
+        String text_copia = text;
+
+        text.compareTo(text_copia);
+
+        return t;
     }
 
     public static String normalize(String text) {
-        /*
-            TODO: Resol aquí la funció
-        */
+        
+        
+
         return "";
     }
    
