@@ -517,8 +517,24 @@ public class Exercici0 {
      * @test ./runTest.sh "com.exercicis.TestExercici0#testGeneraClauOperacio"
      */
     public static String generaClauOperacio() {
-        // TODO
-        return "";
+        Random random = new Random();
+        String clau;
+
+        boolean existeix;
+        do { 
+            int numeroAleatori = 100 + random.nextInt(900);
+            clau = "operacio_" + numeroAleatori;
+
+            existeix = false;
+            for (HashMap<String,Object> operacio : operacions) {
+                if (clau.equals(operacio.get("id"))) {
+                    existeix = true;
+                    break;
+                }
+            }
+        } while (existeix);
+
+        return clau;
     }
 
     /**
@@ -549,8 +565,19 @@ public class Exercici0 {
             String observacions,
             double preu) {
 
-        // TODO
-        return "";
+        String nouId = generaClauOperacio();
+
+        HashMap<String, Object> operacio = new HashMap<>();
+        operacio.put("id", nouId);
+        operacio.put("tipus",tipus);
+        operacio.put("clients", clientsImplicats);
+        operacio.put("data", data);
+        operacio.put("observacions", observacions);
+        operacio.put("preu", preu);
+
+        operacions.add(operacio);
+
+        return nouId;
     }
 
     /**
