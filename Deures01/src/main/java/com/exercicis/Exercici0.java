@@ -216,7 +216,30 @@ public class Exercici0 {
      * @test ./runTest.sh "com.exercicis.TestExercici0#testValidarClients"
      */
     public static boolean validarClients(ArrayList<String> clientsLlista, ArrayList<String> clientsGlobals) {
-        // TODO
+        if (clientsLlista == null || clientsGlobals == null){
+            return false;
+        }
+
+        HashMap<String, Integer> clientCount = new HashMap<>();
+
+        for (String client : clientsLlista) {
+            if (clientCount.containsKey(client)){
+                clientCount.put(client, clientCount.get(client) + 1);
+            } else {
+                clientCount.put(client, 1);
+            }
+        }
+            // Si el cliente ya existe, se le sumara +1 veces aparecidas
+            // Si nunca ha aparecido, se le asigna 1 veces aparecidas.
+
+        for (String client : clientsLlista){
+            if (clientCount.get(client) > 1 || clientsGlobals.contains(client)){
+                return false;
+            }
+        }
+            // Comprovamos dentro del HashMap si el Integer > 1 (significa que ha aparecido mas de 1 vez)
+            // O si dentro de la lista global de clientes ya existe.
+
         return false;
     }
 
@@ -229,8 +252,16 @@ public class Exercici0 {
      * @test ./runTest.sh "com.exercicis.TestExercici0#testIsAllDigits"
      */
     public static boolean isAllDigits(String str) {
-        // TODO
-        return false;
+        if (str.length() == 0){
+            return false;
+        }
+
+        for (char c : str.toCharArray()){
+            if (!Character.isDigit(c)){
+                return false;
+            }
+        }
+        return true;
     }
 
     /**
