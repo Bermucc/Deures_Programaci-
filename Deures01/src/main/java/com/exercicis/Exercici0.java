@@ -673,8 +673,16 @@ public class Exercici0 {
      * @test ./runTest.sh "com.exercicis.TestExercici0#testLlistarOperacionsClient"
      */
     public static ArrayList<HashMap<String, Object>> llistarOperacionsClient(String clauClient) {
-        // TODO
-        return null;
+        ArrayList<HashMap<String, Object>> resultat = new ArrayList<>();
+
+        for (HashMap<String, Object> operacio : operacions) {
+            ArrayList<String> clients = (ArrayList<String>) operacio.get("clients");
+            if (clients != null && clients.contains(clauClient)) {
+                resultat.add(operacio);
+            }
+        }
+
+        return resultat;
     }
 
     /**
