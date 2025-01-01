@@ -453,8 +453,13 @@ public class Exercici0 {
      * @test ./runTest.sh "com.exercicis.TestExercici0#testEsborrarClient"
      */
     public static String esborrarClient(String clauClient) {
-        // TODO
-        return "";
+        if (!clients.containsKey(clauClient)) {
+            return "Client amb clau " + clauClient + " no existeix.";
+        }
+
+        clients.remove(clauClient);
+
+        return "OK";
     }
 
     /**
@@ -470,11 +475,36 @@ public class Exercici0 {
      * @test ./runTest.sh "com.exercicis.TestExercici0#testLlistarClients"
      */
     public static ArrayList<HashMap<String, HashMap<String, Object>>> llistarClients(
-            ArrayList<String> claus,
-            HashMap<String, Object> condicions) {
-        
-        // TODO
-        return null;
+        ArrayList<String> claus,
+        HashMap<String, Object> condicions) {
+    
+    ArrayList<HashMap<String, HashMap<String, Object>>> resultat = new ArrayList<>();
+
+    for (String clau : clients.keySet()) {
+        if (!claus.contains(clau)) {
+            continue;
+        }
+
+        HashMap<String, Object> dades = clients.get(clau);
+        boolean coincideix = true;
+
+        for (String key : condicions.keySet()) {
+            Object valorEsperat = condicions.get(key);
+
+            if (!dades.containsKey(key) || !dades.get(key).equals(valorEsperat)) {
+                coincideix = false;
+                break;
+            }
+        }
+
+        if (coincideix) {
+            HashMap<String, HashMap<String, Object>> clientValid = new HashMap<>();
+            clientValid.put(clau, dades);
+            resultat.add(clientValid);
+        }
+    }
+
+    return resultat;
     }
 
     /**
