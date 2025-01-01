@@ -101,7 +101,8 @@ public class Exercici0 {
      * @test ./runTest.sh "com.exercicis.TestExercici0#testValidarEdat"
      */
     public static boolean validarEdat(int edat) {
-        return (edat >= 18 && edat <= 100);
+        return (edat >= 18 && edat <= 100); 
+        // Si solo se comprueba 1 cosa se puede hacer directamente con el return.
     }
 
     /**
@@ -122,7 +123,18 @@ public class Exercici0 {
      * @test ./runTest.sh "com.exercicis.TestExercici0#testValidarFactors"
      */
     public static boolean validarFactors(String[] factors) {
-        // TODO
+        if (factors != null && factors.length == 2){
+            String tipus = factors[0];
+            String risc = factors[1];
+
+            if ("autònom".equals(tipus) && "risc baix".equals(risc)){
+                return false;
+            }
+
+            return ("autònom".equals(tipus) || "empresa".equals(tipus) &&
+                "risc alt".equals(risc) || "risc mitjà".equals(risc) || "risc baix".equals(risc));
+        }
+
         return false;
     }
 
@@ -142,8 +154,7 @@ public class Exercici0 {
      * @test ./runTest.sh "com.exercicis.TestExercici0#testValidarDescompte"
      */
     public static boolean validarDescompte(double descompte) {
-        // TODO
-        return false;
+        return (descompte >= 0 && descompte <=20);
     }
 
     /**
