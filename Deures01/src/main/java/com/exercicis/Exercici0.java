@@ -286,7 +286,44 @@ public class Exercici0 {
      * @test ./runTest.sh "com.exercicis.TestExercici0#testValidarData"
      */
     public static boolean validarData(String data) {
-        // TODO
+        if (data == null || data.length() != 10){
+            return false;
+        }
+
+        if (data.charAt(4) != '-' || data.charAt(7) != '-' ){
+            return false;
+        }
+
+        String anyStr = data.substring(0,4);
+        String mesStr = data.substring(5,7);
+        String diaStr = data.substring(8,10);
+
+        if (!isAllDigits(anyStr) || !isAllDigits(mesStr) || !isAllDigits(diaStr)){
+            return false;
+        }
+
+        int any = Integer.parseInt(anyStr);
+        int mes = Integer.parseInt(mesStr);
+        int dia = Integer.parseInt(diaStr);
+
+        if (any < 1000 || any > 9999){
+            return false;
+        }
+        if (mes < 1 || mes > 12){
+            return false;
+        }
+        if (dia < 1 || dia > 31){
+            return false;
+        }
+
+        if ((mes == 4 || mes == 6 || mes == 9 || mes == 11) && dia > 30){
+            return false;
+        }
+
+        if (mes == 2 && dia > 29){
+            return false;
+        }
+
         return false;
     }
 
