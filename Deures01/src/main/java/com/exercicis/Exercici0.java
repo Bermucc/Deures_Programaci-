@@ -365,7 +365,7 @@ public class Exercici0 {
             int numeroAleatori = 100 + random.nextInt(900);
             clau = "client_" + numeroAleatori;
         } while (clients.containsKey(clau));
-        
+
         return clau;
     }
 
@@ -388,8 +388,18 @@ public class Exercici0 {
      * @test ./runTest.sh "com.exercicis.TestExercici0#testAfegirClient"
      */
     public static String afegirClient(String nom, int edat, ArrayList<String> factors, double descompte) {
-        // TODO
-        return "";
+        
+        String novaClau = generaClauClient();
+
+        HashMap<String,Object> clientInfo = new HashMap<>();
+        clientInfo.put("nom", nom);
+        clientInfo.put("edat", edat);
+        clientInfo.put("factors",factors);
+        clientInfo.put("descompte",descompte);
+
+        clients.put(novaClau, clientInfo);
+
+        return novaClau;
     }
 
     /**
