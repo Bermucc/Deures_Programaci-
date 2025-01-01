@@ -101,8 +101,7 @@ public class Exercici0 {
      * @test ./runTest.sh "com.exercicis.TestExercici0#testValidarEdat"
      */
     public static boolean validarEdat(int edat) {
-        // TODO
-        return false;
+        return (edat >= 18 && edat <= 100);
     }
 
     /**
