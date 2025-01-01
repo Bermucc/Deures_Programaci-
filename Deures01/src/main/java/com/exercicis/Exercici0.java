@@ -2,6 +2,7 @@ package com.exercicis;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -344,8 +345,7 @@ public class Exercici0 {
      * @test ./runTest.sh "com.exercicis.TestExercici0#testValidarPreu"
      */
     public static boolean validarPreu(double preu) {
-        // TODO
-        return false;
+        return preu > 100;
     }
 
     /**
@@ -358,8 +358,15 @@ public class Exercici0 {
      * @test ./runTest.sh "com.exercicis.TestExercici0#testGeneraClauClient"
      */
     public static String generaClauClient() {
-        // TODO
-        return "";
+        Random random = new Random();
+        String clau;
+
+        do { 
+            int numeroAleatori = 100 + random.nextInt(900);
+            clau = "client_" + numeroAleatori;
+        } while (clients.containsKey(clau));
+        
+        return clau;
     }
 
     /**
