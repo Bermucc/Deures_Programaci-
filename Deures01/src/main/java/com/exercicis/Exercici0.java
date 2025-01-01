@@ -1,12 +1,8 @@
 package com.exercicis;
-import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
-import java.util.Locale;
-import java.util.NoSuchElementException;
-import java.util.Random;
+import java.util.Scanner;
 
 /**
     Introducció
@@ -74,8 +70,24 @@ public class Exercici0 {
      * @test ./runTest.sh "com.exercicis.TestExercici0#testValidarNom"
      */
     public static boolean validarNom(String nom) {
-        // TODO
-        return false;
+        nom = nom.trim().toLowerCase(); // Elimina esp al principio y final y conv en minus.
+
+        if(nom.isEmpty()){ // .isEmpty si esta vacio.
+            return false;
+        }
+        
+        String caracteresAceptados = "\" abcdefghijklmnopqrstuvwxyzàáèéìíòóùúäëïöüç\""; // "\" Lo lee como un caracter literal.
+
+        for(char letras : nom.toCharArray()){
+            if (caracteresAceptados.indexOf(letras) == -1 && nom.length() < 2){
+                return false;
+            }
+            // Albert, he revisado y esta parte del ejercicio pides que
+            //como mínimo deba contener dos letras, pero en el Resolt
+            //no se comprueba en ningun momento, solo los caracteres validos.
+        }
+
+        return true;
     }
     
     /**
