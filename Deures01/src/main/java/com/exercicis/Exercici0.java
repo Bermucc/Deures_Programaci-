@@ -178,7 +178,18 @@ public class Exercici0 {
      * @test ./runTest.sh "com.exercicis.TestExercici0#testValidarTipusOperacio"
      */
     public static boolean validarTipusOperacio(String tipus) {
-        // TODO
+        String[] tipusValids = {
+            "Declaració d'impostos", "Gestió laboral", "Assessoria fiscal",
+            "Constitució de societat", "Modificació d'escriptures",
+            "Testament", "Gestió d'herències", "Acta notarial",
+            "Contracte de compravenda", "Contracte de lloguer"
+        };
+
+        for (String tipusValid : tipusValids){
+            if(tipusValid.equals(tipus)){
+                return true;
+            }
+        }
         return false;
     }
 
