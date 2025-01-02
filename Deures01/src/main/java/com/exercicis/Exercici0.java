@@ -2,6 +2,7 @@ package com.exercicis;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Locale;
 import java.util.Random;
 import java.util.Scanner;
@@ -1316,7 +1317,41 @@ Impostos:  21% (14.41)                     Total: 83.04
      * @param scanner L'objecte Scanner per llegir l'entrada de l'usuari.
      */
     public static void gestionaClientsOperacions(Scanner scanner) {
-        // TODO
+        ArrayList<String> menu = getCadenesMenu();
+        ArrayList<String> resultat = new ArrayList<>();
+        while (true) {
+            
+            clearScreen();
+            dibuixarLlista(menu);
+            dibuixarLlista(resultat);
+
+            String opcio = obtenirOpcio(scanner);
+
+            switch (opcio.toLowerCase(Locale.ROOT)) {
+                case "sortir":
+                    dibuixarLlista(new ArrayList<>(List.of("Fins aviat!")));
+                    return;
+
+                case "afegir client":
+                    resultat = afegirClientMenu(scanner);
+                    break;
+
+                case "modificar client":
+                    resultat = modificarClientMenu(scanner);
+                    break;
+
+                case "esborrar client":
+                    resultat = esborrarClientMenu(scanner);
+                    break;
+
+                case "llistar clients":
+                    resultat = getLlistarClientsMenu();
+                    break;
+
+                default:
+                    resultat = new ArrayList<>(List.of("Opció no vàlida. Torna a intentar-ho."));
+            }
+        }
     }
 
     /**
