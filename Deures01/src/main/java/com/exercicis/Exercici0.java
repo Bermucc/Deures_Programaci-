@@ -2,6 +2,7 @@ package com.exercicis;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -710,8 +711,38 @@ public class Exercici0 {
      * @test ./runTest.sh "com.exercicis.TestExercici0#testAlineaColumnes"
      */
     public static String alineaColumnes(ArrayList<Object[]> columnes) {
-        // TODO
-        return "";
+        StringBuilder result = new StringBuilder();
+
+        for (Object [] columna : columnes) {
+            String text = (String) columna[0];
+            String alineacio = (String) columna [1];
+            int ample = (int) columna[2];
+
+            if (text.length() > ample) {
+                text = text.substring(0, ample);
+            }
+
+            int espais = ample - text.length();
+
+            switch (alineacio) {
+                case "left":
+                    result.append(text);
+                    result.append(" ".repeat(espais));
+                    break;
+                case "right":
+                    result.append(" ".repeat(espais));
+                    result.append(text);
+                    break;
+                case "center":
+                    int espaisEsquerra = espais / 2;
+                    int espaisDreta = espais - espaisEsquerra;
+                    result.append(" ".repeat(espaisEsquerra));
+                    result.append(text);
+                    result.append(" ".repeat(espaisDreta));
+                    break;
+            }
+        }
+        return result.toString();
     }
 
     /**
@@ -765,8 +796,82 @@ Impostos:  21% (14.41)                     Total: 83.04
      * @test ./runTest.sh "com.exercicis.TestExercici0#testTaulaOperacionsClient2"
      */
     public static ArrayList<String> taulaOperacionsClient(String clauClient, String ordre) {
-        // TODO
-        return null;
+        Locale defaultLocale = Locale.getDefault();
+        try {
+            Locale.setDefault(Locale.US);
+
+            HashMap<String, Object> client = clients.get(clauClient);
+            if (client == null) {
+                ArrayList<String> error = new ArrayList<>();
+                error.add("Client amb clau " + clauClient + " no existeix.");
+                return error;
+            }
+
+            ArrayList<HashMap<String, Object>> operacionsClient = llistarOperacionsClient(clauClient);
+            operacionsClient.sort((o1, o2) -> {
+                Object val1 = o1.get(ordre);
+                Object val2 = o2.get(ordre);
+                return val1.toString().compareTo(val2.toString());
+            });
+
+            ArrayList<String> linies = new ArrayList<>();
+
+            String nomEdat = client.get("nom") + ", " + client.get("edat");
+            String factors = "[" + String.join(", ", (ArrayList<String>) client.get("factors")) + "]";
+
+            ArrayList<Object[]> columnesCapcalera = new ArrayList<>();
+            columnesCapcalera.add(new Object[]{nomEdat, "left", 25});
+            columnesCapcalera.add(new Object[]{factors, "right", 30});
+            linies.add(alineaColumnes(columnesCapcalera));
+
+            linies.add("-".repeat(55));
+
+            ArrayList<Object[]> columnesTitols = new ArrayList<>();
+            columnesTitols.add(new Object[]{"Tipus", "left", 30});
+            columnesTitols.add(new Object[]{"Data", "left", 10});
+            columnesTitols.add(new Object[]{"Preu", "right", 15});
+            linies.add(alineaColumnes(columnesTitols));
+
+            double sumaPreus = 0.0;
+
+            for (HashMap<String, Object> operacio : operacionsClient) {
+                ArrayList<Object[]> columnesOperacio = new ArrayList<>();
+                columnesOperacio.add(new Object[]{operacio.get("tipus").toString(), "left", 30});
+                columnesOperacio.add(new Object[]{operacio.get("data").toString(), "left", 10});
+
+                double preu = ((Number) operacio.get("preu")).doubleValue();
+                columnesOperacio.add(new Object[]{String.format("%.2f", preu), "right", 15});
+
+                linies.add(alineaColumnes(columnesTitols));
+                sumaPreus += preu;
+            }
+
+            linies.add("-".repeat(55));
+
+            int descomptePercentatge = 10;
+            double percentatge = (100 - descomptePercentatge);
+            double preusDescomptat = sumaPreus * (percentatge / 100.0);
+            double impostos = preusDescomptat * 0.21;
+            double total = preusDescomptat + impostos;
+
+            ArrayList<Object[]> columnesTotals = new ArrayList<>();
+            columnesTotals.add(new Object[]{String.format("Suma: %.2f", sumaPreus), "right", 55});
+            linies.add(alineaColumnes(columnesTotals));
+
+            ArrayList<Object[]> columnesDescompte = new ArrayList<>();
+            columnesDescompte.add(new Object[]{String.format("Descompte: %d%%", descomptePercentatge), "left", 30});
+            columnesDescompte.add(new Object[]{String.format("Preu: %.2f", preusDescomptat), "right", 25});
+            linies.add(alineaColumnes(columnesTotals));
+
+            ArrayList<Object[]> columnesImpostos = new ArrayList<>();
+            columnesImpostos.add(new Object[]{String.format("Impostos: 21%% (%.2f)", impostos), "left", 30});
+            columnesImpostos.add(new Object[]{String.format("Total: %.2f", total), "right", 25});
+            linies.add(alineaColumnes(columnesImpostos));
+
+            return linies;
+        } finally {
+            Locale.setDefault(defaultLocale);
+        }
     }
 
     /**
@@ -809,8 +914,19 @@ Impostos:  21% (14.41)                     Total: 83.04
      * @test ./runTest.sh "com.exercicis.TestExercici0#testLlistarClientsMenu"
      */
     public static ArrayList<String> getLlistarClientsMenu() {
-        // TODO
-        return null;
+        ArrayList<String> linies = new ArrayList<>();
+        linies.add("=== Llistar Clients ===");
+
+        if (clients.isEmpty()) {
+            linies.add("No hi ha clients per mostrar.");
+            return linies;
+        }
+
+        for (String clau : clients.keySet()) {
+            linies.add(clau + ": " + clients.get(clau).toString());
+        }
+
+        return linies;
     }
 
     /**
@@ -851,8 +967,37 @@ Impostos:  21% (14.41)                     Total: 83.04
      * @test ./runTest.sh "com.exercicis.TestExercici0#testObtenirOpcio"
      */
     public static String obtenirOpcio(Scanner scanner) {
-        // TODO
-        return "";
+        ArrayList<String> menu = getCadenesMenu();
+
+        while (true) { 
+            System.out.print("Selecciona una opció (número o paraula clau): ");
+
+            String opcio = scanner.nextLine();
+
+            try {
+                int index = Integer.parseInt(opcio);
+                if (index == 0) {
+                    return "Sortir";
+                } else if (index > 0 && index < menu.size() - 1) {
+                    return menu.get(index).substring(3).trim();
+                }
+            } catch (NumberFormatException e) {
+
+            }
+
+            String opcioNormalized = opcio.trim().toLowerCase().replace("ó", "o");
+
+            for (int i = 0; i < menu.size(); i++) {
+                String paraulaClau = menu.get(i).substring(3).trim();
+                String paraulaClauNormalized = paraulaClau.toLowerCase().replace("ó", "o");
+
+                if (paraulaClauNormalized.equals(opcioNormalized)) {
+                    return paraulaClau;
+                }
+            }
+        
+            System.out.println("Opció no vàlida. Torna a intentar-ho.");
+        }
     }
 
     /**
