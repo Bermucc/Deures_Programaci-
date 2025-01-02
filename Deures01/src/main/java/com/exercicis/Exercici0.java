@@ -1208,8 +1208,52 @@ Impostos:  21% (14.41)                     Total: 83.04
      * @test ./runTest.sh "com.exercicis.TestExercici0#testModificarClientMenu"
      */
     public static ArrayList<String> modificarClientMenu(Scanner scanner) {
-        // TODO
-        return null;
+        ArrayList<String> linies = new ArrayList<>();
+        linies.add("=== Modificar Client ===");
+    
+        // Llegir clau client
+        System.out.print("Introdueix la clau del client a modificar (per exemple, 'client_100'): ");
+        String clauClient = scanner.nextLine().trim();
+        if (!clients.containsKey(clauClient)) {
+            linies.add("Client amb clau " + clauClient + " no existeix.");
+            return linies;
+        }
+    
+        // Llegir camp a modificar
+        linies.add("Camps disponibles per modificar: nom, edat, factors, descompte");
+        System.out.print("Introdueix el camp que vols modificar: ");
+        String camp = scanner.nextLine().trim();
+        if (!Arrays.asList("nom", "edat", "factors", "descompte").contains(camp)) {
+            linies.add("El camp " + camp + " no és vàlid.");
+            return linies;
+        }
+    
+        // Llegir nou valor segons el camp
+        Object nouValor = switch (camp) {
+            case "nom" -> llegirNom(scanner);
+            case "edat" -> llegirEdat(scanner);
+            case "factors" -> {
+                ArrayList<String> factors = llegirFactors(scanner);
+                if (!validarFactors(factors.toArray(new String[0]))) {
+                    linies.add("Els factors no són vàlids.");
+                    yield null;
+                }
+                yield factors;
+            }
+            case "descompte" -> llegirDescompte(scanner);
+            default -> null;
+        };
+    
+        if (nouValor == null) return linies;
+    
+        String resultat = modificarClient(clauClient, camp, nouValor);
+        if (!resultat.equals("OK")) {
+            linies.add(resultat);
+        } else {
+            linies.add("S'ha modificat el client " + clauClient + ".");
+        }
+    
+        return linies;
     }
 
     /**
@@ -1232,8 +1276,25 @@ Impostos:  21% (14.41)                     Total: 83.04
      * @test ./runTest.sh "com.exercicis.TestExercici0#testEsborrarClientMenu"
      */
     public static ArrayList<String> esborrarClientMenu(Scanner scanner) {
-        // TODO
-        return null;
+        ArrayList<String> linies = new ArrayList<>();
+        linies.add("=== Esborrar Client ===");
+
+        System.out.print("Introdueix la clau del client a esborrar (per exemple, 'client_100'): ");
+        String clauClient = scanner.nextLine().trim();
+
+        if (!clients.containsKey(clauClient)) {
+            linies.add("Client amb clau " + clauClient + " no existeix.");
+            return linies;
+        }
+
+        String resultat = esborrarClient(clauClient);
+        if (!resultat.equals("OK")) {
+            linies.add(resultat);
+        } else {
+            linies.add("S'ha esborrat el client " + clauClient + ".");
+        }
+
+        return linies;
     }
 
     /**
