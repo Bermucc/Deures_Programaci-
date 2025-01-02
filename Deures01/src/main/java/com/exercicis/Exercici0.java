@@ -1012,8 +1012,15 @@ Impostos:  21% (14.41)                     Total: 83.04
      * @test ./runTest.sh "com.exercicis.TestExercici0#testLlegirNom"
      */
     public static String llegirNom(Scanner scanner) {
-        // TODO
-        return "";
+        System.out.println("Introdueix el nom del client: ");
+        String nom = scanner.nextLine().trim();
+
+        while (!validarNom(nom)) {
+            System.out.println("Nom no vàlid. Només s'accepten lletres i espais.");
+            System.out.println("Introdueix el nom del client: ");
+            nom = scanner.nextLine().trim();
+        }
+        return nom;
     }
 
     /**
@@ -1028,8 +1035,14 @@ Impostos:  21% (14.41)                     Total: 83.04
      * @test ./runTest.sh "com.exercicis.TestExercici0#testLlegirEdat"
      */
     public static int llegirEdat(Scanner scanner) {
-        // TODO
-        return 0;
+        System.out.print("Introdueix l'edat del client (18-100): ");
+        String edatInput = scanner.nextLine().trim();
+
+        while (!isAllDigits(edatInput) || !validarEdat(Integer.parseInt(edatInput))) {
+            System.out.println("Edat no vàlida. Introdueix un número entre 18 i 100.");
+            edatInput = scanner.nextLine().trim();
+        }
+        return Integer.parseInt(edatInput);
     }
     
     /**
