@@ -276,8 +276,39 @@ public class Exercici1 {
      * @test ./runTest.sh "com.exercicis.TestExercici1#testMoveUpFullColumnWithoutMerge"
      */
     public static void moveUp() {
-        // TODO
+        for (int col = 0; col < SIZE; col++){ 
+        int[] newCol = new int[SIZE];
+        int newIndex = 0;
+        
+        for (int row = 0; row < SIZE; row++) {
+            if (board[row][col] != 0){
+                newCol[newIndex] = board[row][col];
+                newIndex++;
+            }
+        }
+
+        for (int i = 0; i < SIZE -1; i++) {
+            if (newCol[i] != 0 && newCol[i] == newCol[i + 1]) {
+                newCol[i] *= 2;
+                newCol[i + 1] = 0;
+            }
+        }
+
+        int[] finalCol = new int[SIZE];
+        int finalIndex = 0;
+        for (int i = 0; i < SIZE; i++) {
+            if (newCol[i] != 0) {
+                finalCol[finalIndex] = newCol[i];
+                finalIndex++;
+            }
+        }
+
+        for (int row = 0; row < SIZE; row++) {
+            board[row][col] = finalCol[row];
+        }
+        
     }
+}
 
     /**
      * Mou totes les fitxes cap avall:
