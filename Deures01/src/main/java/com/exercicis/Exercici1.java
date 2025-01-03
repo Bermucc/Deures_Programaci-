@@ -1,12 +1,6 @@
 package com.exercicis;
-import java.util.Scanner;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Locale;
-import java.util.NoSuchElementException;
 import java.util.Random;
+import java.util.Scanner;
 
 /*
    Implementa una versió simplificada del joc 2048 en Java.
@@ -87,7 +81,18 @@ public class Exercici1 {
      * @test ./runTest.sh "com.exercicis.TestExercici1#testPrintBoardWithLargeNumbers"
      */
     public static void printBoard() {
-        // TODO
+        System.out.println("+----+----+----+----+");
+        for (int[] row : board) {
+            for (int cell: row) {
+                if (cell == 0) {
+                    System.out.printf("|    ", cell == 0 ? "" : cell);
+                } else {
+                    System.out.printf("|%4d", cell == 0 ? "" : cell);
+                }
+            }
+            System.out.println("|");
+            System.out.println("+----+----+----+----+");
+        }
     }
 
     /**
@@ -102,7 +107,13 @@ public class Exercici1 {
      * @test ./runTest.sh "com.exercicis.TestExercici1#testSpawnDoNotOverwriteExisting"
      */
     public static void spawnTile() {
-        // TODO
+        int x, y;
+        do { 
+            x = random.nextInt(SIZE);
+            y = random.nextInt(SIZE);
+        } while (board[x][y] != 0);
+        
+        board[x][y] = random.nextInt(10) == 0 ? 4 : 2;
     }
 
     /**
