@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.exercicis.TestExercici0" time="0.326" tests="35" errors="1" skipped="0" failures="13">
+  <properties>
+    <property name="java.specification.version" value="23"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\decor\Documents\GitHub\Deures_Programaci-\Deures01\target\test-classes;C:\Users\decor\Documents\GitHub\Deures_Programaci-\Deures01\target\classes;C:\Users\decor\.m2\repository\org\openjfx\javafx-controls\20\javafx-controls-20.jar;C:\Users\decor\.m2\repository\org\openjfx\javafx-controls\20\javafx-controls-20-win.jar;C:\Users\decor\.m2\repository\org\openjfx\javafx-fxml\20\javafx-fxml-20.jar;C:\Users\decor\.m2\repository\org\openjfx\javafx-fxml\20\javafx-fxml-20-win.jar;C:\Users\decor\.m2\repository\org\openjfx\javafx-base\20\javafx-base-20.jar;C:\Users\decor\.m2\repository\org\openjfx\javafx-base\20\javafx-base-20-win.jar;C:\Users\decor\.m2\repository\org\openjfx\javafx-graphics\20\javafx-graphics-20.jar;C:\Users\decor\.m2\repository\org\openjfx\javafx-graphics\20\javafx-graphics-20-win.jar;C:\Users\decor\.m2\repository\org\java-websocket\Java-WebSocket\1.5.3\Java-WebSocket-1.5.3.jar;C:\Users\decor\.m2\repository\org\json\json\20240303\json-20240303.jar;C:\Users\decor\.m2\repository\org\xerial\sqlite-jdbc\3.47.0.0\sqlite-jdbc-3.47.0.0.jar;C:\Users\decor\.m2\repository\org\slf4j\slf4j-api\2.0.3\slf4j-api-2.0.3.jar;C:\Users\decor\.m2\repository\org\slf4j\slf4j-simple\2.0.3\slf4j-simple-2.0.3.jar;C:\Users\decor\.m2\repository\org\jline\jline\3.21.0\jline-3.21.0.jar;C:\Users\decor\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\decor\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\decor\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\decor\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\decor\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\decor\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;C:\Users\decor\.m2\repository\com\github\stefanbirkner\system-lambda\1.2.1\system-lambda-1.2.1.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Europe/Madrid"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="23"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="ES"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-23\bin"/>
+    <property name="sun.java.command" value="C:\Users\decor\AppData\Local\Temp\surefire7416406986793260922\surefirebooter-20250107143852527_3.jar C:\Users\decor\AppData\Local\Temp\surefire7416406986793260922 2025-01-07T14-38-52_281-jvmRun1 surefire-20250107143852527_1tmp surefire_0-20250107143852527_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="test" value="com.exercicis.TestExercici0"/>
+    <property name="surefire.test.class.path" value="C:\Users\decor\Documents\GitHub\Deures_Programaci-\Deures01\target\test-classes;C:\Users\decor\Documents\GitHub\Deures_Programaci-\Deures01\target\classes;C:\Users\decor\.m2\repository\org\openjfx\javafx-controls\20\javafx-controls-20.jar;C:\Users\decor\.m2\repository\org\openjfx\javafx-controls\20\javafx-controls-20-win.jar;C:\Users\decor\.m2\repository\org\openjfx\javafx-fxml\20\javafx-fxml-20.jar;C:\Users\decor\.m2\repository\org\openjfx\javafx-fxml\20\javafx-fxml-20-win.jar;C:\Users\decor\.m2\repository\org\openjfx\javafx-base\20\javafx-base-20.jar;C:\Users\decor\.m2\repository\org\openjfx\javafx-base\20\javafx-base-20-win.jar;C:\Users\decor\.m2\repository\org\openjfx\javafx-graphics\20\javafx-graphics-20.jar;C:\Users\decor\.m2\repository\org\openjfx\javafx-graphics\20\javafx-graphics-20-win.jar;C:\Users\decor\.m2\repository\org\java-websocket\Java-WebSocket\1.5.3\Java-WebSocket-1.5.3.jar;C:\Users\decor\.m2\repository\org\json\json\20240303\json-20240303.jar;C:\Users\decor\.m2\repository\org\xerial\sqlite-jdbc\3.47.0.0\sqlite-jdbc-3.47.0.0.jar;C:\Users\decor\.m2\repository\org\slf4j\slf4j-api\2.0.3\slf4j-api-2.0.3.jar;C:\Users\decor\.m2\repository\org\slf4j\slf4j-simple\2.0.3\slf4j-simple-2.0.3.jar;C:\Users\decor\.m2\repository\org\jline\jline\3.21.0\jline-3.21.0.jar;C:\Users\decor\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\decor\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\decor\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\decor\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\decor\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\decor\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;C:\Users\decor\.m2\repository\com\github\stefanbirkner\system-lambda\1.2.1\system-lambda-1.2.1.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\decor"/>
+    <property name="user.language" value="es"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2024-10-15"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-23"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\decor\Documents\GitHub\Deures_Programaci-\Deures01"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\decor\AppData\Local\Temp\surefire7416406986793260922\surefirebooter-20250107143852527_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="23.0.1+11-39"/>
+    <property name="user.name" value="decor"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\decor\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\decor\AppData\Local\Temp\"/>
+    <property name="java.version" value="23.0.1"/>
+    <property name="user.dir" value="C:\Users\decor\Documents\GitHub\Deures_Programaci-\Deures01"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-23\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\decor\AppData\Local\Microsoft\WindowsApps;C:\Users\decor\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\decor\AppData\Local\GitHubDesktop\bin;C:\Program Files\Oracle\VirtualBox\;C:\Program Files\JetBrains\PyCharm 2024.2.1\bin;;C:\Program Files\Maven\apache-maven-3.9.9\bin;;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="23.0.1+11-39"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="67.0"/>
+  </properties>
+  <testcase name="testValidarFactors" classname="com.exercicis.TestExercici0" time="0.068">
+    <failure message="Els factors &apos;null, risc baix&apos; haurien de ser invàlids ==&gt; expected: &lt;false&gt; but was: &lt;true&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: Els factors 'null, risc baix' haurien de ser invàlids ==> expected: <false> but was: <true>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1156)
+	at com.exercicis.TestExercici0.testValidarFactors(TestExercici0.java:77)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+]]></failure>
+  </testcase>
+  <testcase name="testValidarData" classname="com.exercicis.TestExercici0" time="0.003">
+    <failure message="La data &apos;2023-04-15&apos; hauria de ser vàlida ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: La data '2023-04-15' hauria de ser vàlida ==> expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1156)
+	at com.exercicis.TestExercici0.testValidarData(TestExercici0.java:206)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+]]></failure>
+  </testcase>
+  <testcase name="testValidarEdat" classname="com.exercicis.TestExercici0" time="0.008"/>
+  <testcase name="testValidarPreu" classname="com.exercicis.TestExercici0" time="0.003"/>
+  <testcase name="testLlegirFactors" classname="com.exercicis.TestExercici0" time="0.015">
+    <error message="No line found" type="java.util.NoSuchElementException"><![CDATA[java.util.NoSuchElementException: No line found
+	at java.base/java.util.Scanner.nextLine(Scanner.java:1677)
+	at com.exercicis.Exercici0.llegirFactors(Exercici0.java:1092)
+	at com.exercicis.TestExercici0.testLlegirFactors(TestExercici0.java:1153)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+]]></error>
+  </testcase>
+  <testcase name="testModificarOperacio" classname="com.exercicis.TestExercici0" time="0.01">
+    <failure message="expected: &lt;Operació amb id operacio_999 no existeix.&gt; but was: &lt;Operació amb id operacio_999 no existeix&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <Operació amb id operacio_999 no existeix.> but was: <Operació amb id operacio_999 no existeix>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at com.exercicis.TestExercici0.testModificarOperacio(TestExercici0.java:531)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+]]></failure>
+  </testcase>
+  <testcase name="testEsborrarClient" classname="com.exercicis.TestExercici0" time="0.003"/>
+  <testcase name="testModificarClient" classname="com.exercicis.TestExercici0" time="0.002">
+    <failure message="expected: &lt;Client &apos;client_101&apos; no existeix.&gt; but was: &lt;Client &apos;client_101 no existeix.&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <Client 'client_101' no existeix.> but was: <Client 'client_101 no existeix.>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at com.exercicis.TestExercici0.testModificarClient(TestExercici0.java:317)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+]]></failure>
+  </testcase>
+  <testcase name="testLlistarOperacions" classname="com.exercicis.TestExercici0" time="0.004"/>
+  <testcase name="testTaulaOperacionsClient0" classname="com.exercicis.TestExercici0" time="0.021">
+    <failure message="&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Diff found &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&#10;Matching text:&#10;Joan, 30                          [autònom, risc mitjà]&#10;-------------------------------------------------------&#10;Tipus                         Data                 Preu&#10;&#10;First difference at position 168.&#10;Received: T&lt;difference&gt;&#10;Expected: Gestió laboral                2023-09-01         300.00&#10;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; Diff end &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&#10; ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 
+>>>>>>>>>> Diff found >>>>>>>>>>
+Matching text:
+Joan, 30                          [autònom, risc mitjà]
+-------------------------------------------------------
+Tipus                         Data                 Preu
+
+First difference at position 168.
+Received: T<difference>
+Expected: Gestió laboral                2023-09-01         300.00
+<<<<<<<<<< Diff end <<<<<<<<<<
+ ==> expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:214)
+	at com.exercicis.TestExercici0.testTaulaOperacionsClient0(TestExercici0.java:768)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+]]></failure>
+  </testcase>
+  <testcase name="testTaulaOperacionsClient1" classname="com.exercicis.TestExercici0" time="0.005">
+    <failure message="&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Diff found &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&#10;Matching text:&#10;Marta Puig i Puig, 45               [empresa, risc alt]&#10;-------------------------------------------------------&#10;Tipus                         Data                 Preu&#10;&#10;First difference at position 168.&#10;Received: T&lt;difference&gt;&#10;Expected: Constitució de societat       2024-01-15        1250.50&#10;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; Diff end &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&#10; ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 
+>>>>>>>>>> Diff found >>>>>>>>>>
+Matching text:
+Marta Puig i Puig, 45               [empresa, risc alt]
+-------------------------------------------------------
+Tipus                         Data                 Preu
+
+First difference at position 168.
+Received: T<difference>
+Expected: Constitució de societat       2024-01-15        1250.50
+<<<<<<<<<< Diff end <<<<<<<<<<
+ ==> expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:214)
+	at com.exercicis.TestExercici0.testTaulaOperacionsClient1(TestExercici0.java:834)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+]]></failure>
+  </testcase>
+  <testcase name="testTaulaOperacionsClient2" classname="com.exercicis.TestExercici0" time="0.003">
+    <failure message="&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Diff found &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&#10;Matching text:&#10;Pere Vila, 25                    [estudiant, risc baix]&#10;-------------------------------------------------------&#10;Tipus                         Data                 Preu&#10;&#10;First difference at position 168.&#10;Received: T&lt;difference&gt;&#10;Expected: Certificat                    2024-01-10          25.50&#10;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; Diff end &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&#10; ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 
+>>>>>>>>>> Diff found >>>>>>>>>>
+Matching text:
+Pere Vila, 25                    [estudiant, risc baix]
+-------------------------------------------------------
+Tipus                         Data                 Preu
+
+First difference at position 168.
+Received: T<difference>
+Expected: Certificat                    2024-01-10          25.50
+<<<<<<<<<< Diff end <<<<<<<<<<
+ ==> expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:214)
+	at com.exercicis.TestExercici0.testTaulaOperacionsClient2(TestExercici0.java:900)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+]]></failure>
+  </testcase>
+  <testcase name="testValidarTipusOperacio" classname="com.exercicis.TestExercici0" time="0.001"/>
+  <testcase name="testValidarNom" classname="com.exercicis.TestExercici0" time="0.002">
+    <failure message="El nom &apos;Marta123&apos; hauria de ser invàlid ==&gt; expected: &lt;false&gt; but was: &lt;true&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: El nom 'Marta123' hauria de ser invàlid ==> expected: <false> but was: <true>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1156)
+	at com.exercicis.TestExercici0.testValidarNom(TestExercici0.java:38)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+]]></failure>
+  </testcase>
+  <testcase name="testObtenirOpcio" classname="com.exercicis.TestExercici0" time="0.009">
+    <system-out><![CDATA[Selecciona una opció (número o paraula clau): Selecciona una opció (número o paraula clau): Selecciona una opció (número o paraula clau): Selecciona una opció (número o paraula clau): Selecciona una opció (número o paraula clau): Selecciona una opció (número o paraula clau): Selecciona una opció (número o paraula clau): Selecciona una opció (número o paraula clau): Selecciona una opció (número o paraula clau): Selecciona una opció (número o paraula clau): Selecciona una opció (número o paraula clau): Selecciona una opció (número o paraula clau): Selecciona una opció (número o paraula clau): Selecciona una opció (número o paraula clau): ]]></system-out>
+  </testcase>
+  <testcase name="testGeneraClauOperacio" classname="com.exercicis.TestExercici0" time="0.012"/>
+  <testcase name="testDibuixarLlista" classname="com.exercicis.TestExercici0" time="0.002">
+    <failure message="&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Diff found &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&#10;Strings differ in length. Extra content in expected string at position 0&#10;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; Diff end &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&#10; ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 
+>>>>>>>>>> Diff found >>>>>>>>>>
+Strings differ in length. Extra content in expected string at position 0
+<<<<<<<<<< Diff end <<<<<<<<<<
+ ==> expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:214)
+	at com.exercicis.TestExercici0.testDibuixarLlista(TestExercici0.java:1027)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+]]></failure>
+  </testcase>
+  <testcase name="testValidarDescompte" classname="com.exercicis.TestExercici0" time="0.001"/>
+  <testcase name="testIsAllDigits" classname="com.exercicis.TestExercici0" time="0.008"/>
+  <testcase name="testLlistarClientsMenu" classname="com.exercicis.TestExercici0" time="0.003"/>
+  <testcase name="testValidarClients" classname="com.exercicis.TestExercici0" time="0.003">
+    <failure message="La llista de clients &apos;[client1, client2]&apos; amb clients globals &apos;[client1, client2, client3]&apos; hauria de ser vàlida ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: La llista de clients '[client1, client2]' amb clients globals '[client1, client2, client3]' hauria de ser vàlida ==> expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1156)
+	at com.exercicis.TestExercici0.testValidarClients(TestExercici0.java:149)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+]]></failure>
+  </testcase>
+  <testcase name="testLlistarOperacionsClient" classname="com.exercicis.TestExercici0" time="0.003"/>
+  <testcase name="testLlegirDescompte" classname="com.exercicis.TestExercici0" time="0.004"/>
+  <testcase name="testGetCadenesMenu" classname="com.exercicis.TestExercici0" time="0.001"/>
+  <testcase name="testModificarClientMenu" classname="com.exercicis.TestExercici0" time="0.005"/>
+  <testcase name="testLlegirNom" classname="com.exercicis.TestExercici0" time="0.003">
+    <failure message="&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Diff found &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&#10;First difference at position 0.&#10;Received: 1&lt;difference&gt;&#10;Expected: Anna&#10;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; Diff end &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&#10; ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 
+>>>>>>>>>> Diff found >>>>>>>>>>
+First difference at position 0.
+Received: 1<difference>
+Expected: Anna
+<<<<<<<<<< Diff end <<<<<<<<<<
+ ==> expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:214)
+	at com.exercicis.TestExercici0.testLlegirNom(TestExercici0.java:1063)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+]]></failure>
+  </testcase>
+  <testcase name="testAfegirClient" classname="com.exercicis.TestExercici0" time="0.002"/>
+  <testcase name="testEsborrarOperacio" classname="com.exercicis.TestExercici0" time="0.004">
+    <failure message="expected: &lt;Operació amb id operacio_999 no existeix.&gt; but was: &lt;Operació amb id operacio_999 no existeix&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <Operació amb id operacio_999 no existeix.> but was: <Operació amb id operacio_999 no existeix>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at com.exercicis.TestExercici0.testEsborrarOperacio(TestExercici0.java:576)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+]]></failure>
+  </testcase>
+  <testcase name="testAfegirClientMenu" classname="com.exercicis.TestExercici0" time="0.002">
+    <failure message="Per l&apos;entrada &apos;Joan\n30\nautònom\nrisc alt\n10\n&apos;: L&apos;última línia no comença amb el text esperat ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: Per l'entrada 'Joan\n30\nautònom\nrisc alt\n10\n': L'última línia no comença amb el text esperat ==> expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:214)
+	at com.exercicis.TestExercici0.testAfegirClientMenu(TestExercici0.java:1273)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+]]></failure>
+  </testcase>
+  <testcase name="testLlistarClients" classname="com.exercicis.TestExercici0" time="0.0"/>
+  <testcase name="testAfegirOperacio" classname="com.exercicis.TestExercici0" time="0.001"/>
+  <testcase name="testEsborrarClientMenu" classname="com.exercicis.TestExercici0" time="0.002"/>
+  <testcase name="testLlegirEdat" classname="com.exercicis.TestExercici0" time="0.004"/>
+  <testcase name="testGeneraClauClient" classname="com.exercicis.TestExercici0" time="0.018"/>
+  <testcase name="testAlineaColumnes" classname="com.exercicis.TestExercici0" time="0.002"/>
+</testsuite>
